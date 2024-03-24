@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prettier-format": "prettier --config .prettierrc.cjs \"src/**/*.{tsx,js,ts}\" --write",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
@@ -23,6 +23,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
     "@types/eslint": "^8.56.6",
     "@types/lodash": "^4.17.0",
     "@types/node": "^20.11.28",
