@@ -1,4 +1,3 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
 import { memo } from 'react';
 interface FilterTodoProps {
 	setFilterType: (type: string) => void;
