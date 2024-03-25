@@ -101,5 +101,40 @@ import checker from 'vite-plugin-checker'
   }),]
 ```
 
+### 1.7 UnoCss
+> 原子化使用方式，对于类名恐惧者来说是福音，可以省去类名的书写，直接使用预设的类名。
+
+* 安装：`pnpm add -D unocss` 
+* 引入：在主入口文件中进行引入，react中为main.tsx，`import 'virtual:uno.css'`
+> 如果您正在使用 @unocss/preset-attributify，您应该从 build 脚本中删除 tsc。这是官方的原话，在打包的时候应该注意。
+
+#### 1.7.1 @unocss/preset-attributify
+安装：`pnpm add -D @unocss/preset-attributify`
+> 用于将Unocss书写的类名进行美化
+
+> 如果您正在使用 @vitejs/plugin-react 与 @unocss/preset-attributify，您必须在 @vitejs/plugin-react 之前添加 UnoCSS 插件。
+
+官方是这样进行介绍的
+```html
+<button class="bg-blue-400 hover:bg-blue-500 text-sm text-white font-mono font-light py-2 px-4 rounded border-2 border-blue-200 dark:bg-blue-500 dark:hover:bg-blue-600">
+  Button
+</button>
+```
+使用@unocss/preset-attributify之后
+
+```html
+<button
+  bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
+  text="sm white"
+  font="mono light"
+  p="y-2 x-4"
+  border="2 rounded blue-200"
+>
+  Button
+</button>
+```
+
+
+
 ## 二、项目启动
  项目启动：`pnpm dev`
