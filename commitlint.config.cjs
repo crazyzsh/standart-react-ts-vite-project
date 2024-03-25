@@ -16,7 +16,7 @@ module.exports = {
 				// 重构
 				'refactor',
 				// 文档
-				'docs',
+				'📃docs',
 				// 构建过程或者辅助工具的变动,如增加依赖库等
 				'chore',
 				// 不影响代码运行的变动
