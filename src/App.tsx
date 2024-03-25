@@ -1,9 +1,9 @@
-import './App.css';
 import AddTodo from '@/pages/AddTodo';
-import TodoList from '@/pages/TodoList';
 import FilterTodo from '@/pages/FilterTodo';
-import { createContext, useCallback, useMemo, useState } from 'react';
+import TodoList from '@/pages/TodoList';
 import { Todo, TodoAction } from '@/types';
+import { createContext, useCallback, useMemo, useState } from 'react';
+import './App.css';
 
 export const TodoContext = createContext<TodoAction>({} as TodoAction);
 function App() {

@@ -1,5 +1,5 @@
-import { Todo } from '@/types';
 import { TodoContext } from '@/App';
+import { Todo } from '@/types';
 import { useContext } from 'react';
 type TodoItemProps = {
 	todo: Todo;
