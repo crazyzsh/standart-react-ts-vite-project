@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 import { memo } from 'react';
 interface FilterTodoProps {
 	setFilterType: (type: string) => void;
@@ -9,9 +10,11 @@ const FilterTodo = ({ setFilterType }: FilterTodoProps) => {
 		{ unCompleted: '待办' },
 		{ completed: '已办' },
 	];
-	// const test=(num:number)=>{
-	//   return num++;
-	// }
+	const test = (num: number) => {
+		return num++;
+	};
+	console.log(test(1));
+
 	return (
 		<div>
 			{action.map((item) => (
