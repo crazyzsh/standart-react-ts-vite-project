@@ -9,9 +9,9 @@ const FilterTodo = ({ setFilterType }: FilterTodoProps) => {
 		{ unCompleted: '待办' },
 		{ completed: '已办' },
 	];
-  const test=(num:number)=>{
-    return num++
-  }
+	// const test=(num:number)=>{
+	//   return num++;
+	// }
 	return (
 		<div>
 			{action.map((item) => (
@@ -26,4 +26,4 @@ const FilterTodo = ({ setFilterType }: FilterTodoProps) => {
 	);
 };
 
-export default memo(FilterTodo)
+export default memo(FilterTodo);
