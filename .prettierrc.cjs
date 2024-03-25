@@ -32,4 +32,7 @@ module.exports = {
 	htmlWhitespaceSensitivity: 'css',
 	// 换行符使用lf
 	endOfLine: 'lf',
+  // prettier-plugin-organize-imports用于帮助导入进行自动排序，
+  // prettier-plugin-tailwindcss对Tailwind CSS 的 className 进行自动排序插件
+  plugins: ['prettier-plugin-organize-imports', 'prettier-plugin-tailwindcss'], 
 };

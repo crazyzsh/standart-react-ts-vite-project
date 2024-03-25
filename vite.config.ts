@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
-import UnoCSS from 'unocss/vite';
+
 // https://vitejs.dev/config/
 export default defineConfig({
 	resolve: {
@@ -11,9 +11,6 @@ export default defineConfig({
 		},
 	},
 	plugins: [
-		UnoCSS({
-			configFile: './uno.config.ts',
-		}),
 		react(),
 		checker({
 			typescript: true,

@@ -4,13 +4,15 @@
 > VSCode中的eslint插件以及项目中的eslint第三方库共用同一套配置，即`.eslintrc.**` ，只要项目跟目录下存在，则以该配置文件中相关配置为准则进行校验。
 * VSCode中的eslint插件可以更爱好的进行图形化界面提示，包括将代码爆红、警告⚠️，我们在开发过程中可以很好的根据提示进行修复，而不用等到代码提交时候再修复，用以辅助纠正代码风格，是第一道过滤网。
 ### 1.2 prettier
-> eslint可以发现问题，prettier可以纠正问题，项目中同样要配置`.prettierrc.**`文件进行相关规则配置
+> eslint可以发现问题，prettier可以纠正问题，项目中同样要配置`.prettierrc.**`文件进行相关规则配置。
+
 主要有三种方法进行格式化代码：
 * 右键文件进行格式化
 * 保存后自动进行格式化
 * 使用命令进行格式化
 ### 1.3 husky
-> husky是一个为 git 客户端增加 hook 的工具，在一些 git 操作时（某一生命周期）候自动触发钩子函数
+> husky是一个为 git 客户端增加 hook 的工具，在一些 git 操作时（某一生命周期）候自动触发钩子函数。
+
 安装使用：
 首先确保项目已经进行git初始化了。安装：`pnpm add -D husky`，使用`pnpm exec husky init` 生成husky文件夹，会默认生成husky文件夹，为了后续他人下载项目后执行`pnpm install`进行相关依赖下载时候会自动生成相应的husky文件，通常在package.json文件添加脚本，即在scripts中添加`"prepare":"husky init"` 
 ### 1.4 lint-staged
@@ -26,10 +28,10 @@
   }
 ```
 其中`npm run lint`， `npm run prettier-format` 等在package.json中的配置如下：
+
 ```json
 "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 "prettier-format": "prettier --config .prettierrc.cjs \"src/**/*.{tsx,js,ts}\" --write",
-
 ```
 在husky的`pre-commit`钩子中写入回调，以便于在提交前执行`pre-commit`钩子中的回调：执行`echo "npx lint-staged" > .husky/pre-commit` ，即在.husky文件下生成一个pre-commit文件，并写入`npx lint-staged`
 

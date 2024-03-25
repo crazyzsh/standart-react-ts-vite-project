@@ -19,7 +19,7 @@ const AddTodo = ({ addTodo }: AddTodoProps) => {
 	return (
 		<form action="" onSubmit={handleSubmit}>
 			<input type="text" value={content} onChange={handleInputChange} />
-			<button>添加新事项</button>
+			<button className=" underline">添加新事项</button>
 		</form>
 	);
 };
